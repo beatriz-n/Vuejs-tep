@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <h1>{{titulo}}</h1>
-        <!-- quando eu clicar nesse botão ira me direcionar ao google -->
+        {{fullName}}
        
     </div>
 
@@ -21,25 +21,30 @@
             el: "#app",
             data:{
                 titulo:"aula 01 - vuejs",
-                firtName:"",
+                firtName:"",//variavel
                 lastName:"",
             },
-
+//propriedade que serve para retonar valores, retornar alguma rotina, sera sempre atualizada com as dependencias
             computed:{
                 fullName(){
                     return this.firtName +''+this.lastName; 
                 }
             },
-
+//função fica dentro de method
+//watch é para observar quando uma varivel é alterada
             watch:{
-                // nome(newValue,oldValue){
-                //     console.log('newValue',newValue);
-                //     console.log('oldValue',oldValue);
+                //firtName(nemValue){
+                //this.updateUser();
+                //}
+                //     
                // }
 
             },
 // toda logica deve estar aqui
-            methods:{}
+            methods:{
+                // updateUser(0{
+                //     console.log('usuario atualizado');
+            }
         });
     </script>
 </body>
