@@ -24,8 +24,10 @@
         var mixin ={
             methods:{
                 getUsers(){
+                    this.loader.users = true;
                     var url ='https://jsonplaceholder.typicode.com/users';
-                    this.$http.get(url).them(function(r){
+                    this.$http.get(url)
+                    .them(function(r){
                         this.users = r.body;
                     }, function(error){
                         this.response.status="error";
